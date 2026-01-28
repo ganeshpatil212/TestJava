@@ -24,7 +24,7 @@ public class ConsumerController {
 	
 	@GetMapping("/cunsume")
 	public String consume() {
-		System.out.println("from consume method");
+		System.out.println("from the consume method");
 	 @Nullable String ss=	webClientConfig.webClient()
 			// .post()
 			 .get()
