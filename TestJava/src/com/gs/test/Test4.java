@@ -3,6 +3,7 @@ package com.gs.test;
 class A{
 	int i = 10;
 	void display() {
+		System.out.println("from class A");
 		System.out.println("Class A: i = " + i);
 	}
 }
