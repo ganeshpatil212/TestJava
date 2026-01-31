@@ -8,6 +8,7 @@ class A{
 }
 
 class B extends A{
+	
 	int j = 20;
 	void display() {
 		System.out.println("Class B: j = " + j);
@@ -16,6 +17,7 @@ class B extends A{
 		System.out.println("Class B: i + j = " + (i + j));
 	}
 	void sampe() {
+		System.out.println("from class a");
 		System.out.println("from class b");
 	}
 }
