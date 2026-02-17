@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: ECom-Config-Server
+
+server:
+  port: 8888
+
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ganeshpatil212/ecommerce-config-repo.git
+          clone-on-start: true

@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  config:
+    import: "optional:configserver:http://localhost:8888"
+  cloud:
+    gateway:
+      routes:
+        - id: product-service
+          uri: lb://ECOM-PRODUCTSERVICE
+          predicates:
+            - Path=/products/**
+        - id: user-service
+          uri: lb://ECOM-USERSERVICE
+          predicates:
+            - Path=/users/**
+        - id: order-service
+          uri: lb://ORDER-SERVICE
+          predicates:
+            - Path=/orders/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
